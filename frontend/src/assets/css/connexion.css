@@ -1,0 +1,199 @@
+.connexioncontainer {
+  height: 100vh;
+  background-color: var(--backgroundcolor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+.formcontainer {
+  height: 60%;
+  display: flex;
+  border-radius: 10px;
+  width: 80%;
+  background: linear-gradient(
+    283deg,
+    #9b4412,
+    #d08609,
+    #380e1f,
+    #158b8c,
+    #1f690e
+  );
+  background-size: 1000% 1000%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 30%;
+  }
+  50% {
+    background-position: 100% 71%;
+  }
+  100% {
+    background-position: 0% 30%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 30%;
+  }
+  50% {
+    background-position: 100% 71%;
+  }
+  100% {
+    background-position: 0% 30%;
+  }
+}
+.containerconnexiontitle {
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+}
+.containertop {
+  height: 20%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+.titleconnexion {
+  background: linear-gradient(
+    283deg,
+    #9b4412,
+    #d08609,
+    #380e1f,
+    #158b8c,
+    #1f690e
+  );
+  background-size: 1000% 1000%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 7px;
+  font-family: var(--font);
+  font-size: 130px;
+}
+.rightside {
+  border: 0px 1px solid orange 0px 1px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+.form {
+  height: 70%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.inputform {
+  width: 80%;
+  height: 2rem;
+  border-radius: 15px;
+  padding-left: 20px;
+  border: 0;
+}
+.btnform {
+  width: 50%;
+  height: 2rem;
+  border: 0;
+  border-radius: 15px;
+  font-family: var(--font);
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+.inputform:focus {
+  outline: #7b8fdd;
+}
+.titlefrom {
+  color: white;
+  font-family: var(--font);
+  font-size: 50px;
+  letter-spacing: 3px;
+}
+.leftside {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.titleformleftside {
+  color: white;
+  font-family: var(--font);
+  font-size: 70px;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+.textformleftside {
+  color: white;
+  font-family: var(--font);
+  font-size: 40px;
+  letter-spacing: 3px;
+  margin: 20px 0 10px 0;
+}
+.textformleftsidetop {
+  color: white;
+  font-family: var(--font);
+  font-size: 40px;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+.textformcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+  height: 50%;
+}
+hr {
+  border: none;
+  border-left: 1px solid hsla(200, 10%, 50%, 100);
+  height: 80%;
+
+  width: 1px;
+}
+.hrcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputcontainerform {
+  background-color: transparent;
+  width: 100%;
+  height: auto;
+}
+.textlabel {
+  color: white;
+  font-family: var(--font);
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+.inputform,
+textarea {
+  color: black;
+  font-family: "Aeonik-Light";
+  font-size: 20px;
+}
+.btnreturn {
+}
+.btnreturncontainer {
+  border: 1px solid red;
+  width: 10%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}

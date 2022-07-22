@@ -1,0 +1,73 @@
+.navbarcontainer {
+  height: 45px;
+  background-color: #050716;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-top: 5px;
+}
+.btnnavbar {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  font-size: 30px;
+  font-family: "Aeonik-Light";
+  margin-right: 30px;
+}
+.circles {
+  width: 40px;
+  height: 40px;
+  -moz-border-radius: 70px;
+  -webkit-border-radius: 70px;
+  border-radius: 70px;
+  background: linear-gradient(
+    173deg,
+    #d43e3e,
+    #dda905,
+    #65d21c,
+    #1cd2a3,
+    #1c40d2,
+    #b91cd2,
+    #1cd1d2,
+    #e4f312
+  );
+  background-size: 1600% 1600%;
+  -webkit-animation: AnimationName 13s ease infinite;
+  animation: AnimationName 13s ease infinite;
+  margin-left: 30px;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 91%;
+  }
+  50% {
+    background-position: 100% 10%;
+  }
+  100% {
+    background-position: 0% 91%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 91%;
+  }
+  50% {
+    background-position: 100% 10%;
+  }
+  100% {
+    background-position: 0% 91%;
+  }
+}
+.textnavbar {
+  color: white;
+  font-family: var(--font);
+  font-size: 25px;
+}
+.linkgohome {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+}

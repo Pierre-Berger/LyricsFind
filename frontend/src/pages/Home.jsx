@@ -1,36 +1,83 @@
-import Counter from "../components/Counter";
-import logo from "../assets/logo.svg";
+/* eslint-disable react/jsx-props-no-spreading */
+import { useForm } from "react-hook-form";
 
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import animateScrollTo from "animated-scroll-to";
+import axios from "axios";
+import Navbar from "../components/Navbar";
+import "../assets/css/home.css";
+import scroll from "../assets/scroll.gif";
+
+/* eslint-disable jsx-a11y/media-has-caption */
 export default function Home() {
+  const [connected, setConnected] = useState();
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/auth`, {
+        withCredentials: true,
+      })
+      .then(() => {
+        setConnected(true);
+      })
+      .catch(() => {
+        setConnected(false);
+      });
+  }, []);
+
+  const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
+
+  const onSubmit = (data) => {
+    navigate(`/result/${data.search}`);
+  };
+
+  const onClickScreenScroll = () => {
+    animateScrollTo(0);
+  };
+
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
-
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code>.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="homecontainer">
+      <Navbar connected={connected} />
+      <div className="homepagecontainer">
+        <div
+          data-aos="fade-down-right"
+          data-aos-duration="2500"
+          className="titlecontainer"
         >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
+          <h1 className="title">Find </h1>
+          <h1 className="title">Your</h1>
+          <h1 className="title">Music</h1>
+          <h1 className="titlelong">With Lyrics</h1>
+        </div>
+        <div
+          data-aos="fade-left"
+          data-aos-duration="2500"
+          className="videocontainer"
         >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+          <video className="video" autoPlay muted loop>
+            <source src="src/assets/video.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div className="scrollcontainer">
+        <p className="textscroll">Scroll me </p>
+        <img src={scroll} className="scrollgif" alt="scroll" />
+      </div>
+      <form className="inputcontainer" onSubmit={handleSubmit(onSubmit)}>
+        <p className="inputtext">Search Lyrics : </p>
+        <input
+          className="inputsearch"
+          type="text"
+          {...register("search", { required: true })}
+        />
+        <input
+          className="btnsubmit"
+          onClick={onClickScreenScroll}
+          type="submit"
+          value="Search"
+        />
+      </form>
+    </div>
   );
 }

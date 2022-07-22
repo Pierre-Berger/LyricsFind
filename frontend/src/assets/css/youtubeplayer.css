@@ -1,0 +1,15 @@
+.containeryoutubeplayer {
+  height: 100vh;
+  background-color: var(--backgroundcolor);
+  width: 100%;
+}
+.topcontaineryoutube {
+  display: flex;
+  padding: 20px;
+}
+.playercontainer {
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,166 @@
+@font-face {
+  font-family: "Aeonik-Light";
+  src: url("../Aeonik-Light.otf") format("opentype");
+}
+.homecontainer {
+  height: 87vh;
+  width: auto;
+}
+.homepagecontainer {
+  background-color: #050716;
+  height: calc(100% - 40px);
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.titlecontainer {
+  font-family: "Aeonik-Light";
+  font-size: 80px;
+  z-index: 1;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  letter-spacing: 7px;
+  margin: 0 0 0 100px;
+}
+.title {
+  background: linear-gradient(
+    120deg,
+    #d1aad7,
+    #c88bc4 25.17%,
+    #7b8fdd 50%,
+    #86bff2 73.09%,
+    #bbdef2
+  );
+  background-size: 1000% 1000%;
+  -webkit-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.titlelong {
+  background: linear-gradient(
+    120deg,
+    #d1aad7,
+    #c88bc4 25.17%,
+    #7b8fdd 50%,
+    #86bff2 73.09%,
+    #bbdef2
+  );
+
+  background-size: 1000% 1000%;
+  -webkit-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.videocontainer {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1;
+}
+.video {
+  width: 100%;
+}
+.inputcontainer {
+  background-color: #050716;
+  height: 40%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+.inputsearch {
+  height: 85px;
+  width: 60%;
+  background-color: transparent;
+  border-radius: 15px;
+  border: 1px solid white;
+}
+.inputsearch,
+textarea {
+  color: white;
+  font-family: "Aeonik-Light";
+  font-size: 70px;
+}
+.inputtext {
+  font-family: var(--font);
+  font-size: 50px;
+  color: white;
+}
+.btnsubmit {
+  background: linear-gradient(
+    90deg,
+    #d1aad7,
+    #c88bc4 25.17%,
+    #7b8fdd 50%,
+    #86bff2 73.09%,
+    #bbdef2
+  );
+  background-size: 1000% 1000%;
+  -webkit-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite;
+  font-family: "Aeonik-Light";
+  border: 0;
+  border-radius: 15px;
+  height: 50px;
+  width: 30%;
+  font-size: 40px;
+  color: black;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 51%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.scrollgif {
+  background-color: var(--backgroundcolor);
+  height: 70px;
+  width: 10%;
+}
+.scrollcontainer {
+  background-color: var(--backgroundcolor);
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.textscroll {
+  color: white;
+  font-family: var(--font);
+  font-size: 30px;
+  letter-spacing: 4px;
+  width: 15%;
+}
+.inputsearch:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

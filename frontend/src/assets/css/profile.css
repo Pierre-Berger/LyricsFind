@@ -1,0 +1,96 @@
+.profilecontainer {
+  background-color: var(--backgroundcolor);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.titleprofilecontainer {
+  height: 40%;
+  margin: 40px 0 0 30px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 40px;
+}
+.profiletitle {
+  color: white;
+  font-family: var(--font);
+  font-size: 130px;
+  margin-left: 30px;
+  letter-spacing: 7px;
+  background: linear-gradient(
+    120deg,
+    #d1aad7,
+    #c88bc4 25.17%,
+    #7b8fdd 50%,
+    #86bff2 73.09%,
+    #bbdef2
+  );
+
+  background-size: 1000% 1000%;
+  -webkit-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.profiletitlefav {
+  color: white;
+  font-family: var(--font);
+  font-size: 90px;
+  margin-left: 60px;
+  letter-spacing: 7px;
+  background: linear-gradient(
+    120deg,
+    #d1aad7,
+    #c88bc4 25.17%,
+    #7b8fdd 50%,
+    #86bff2 73.09%,
+    #bbdef2
+  );
+
+  background-size: 1000% 1000%;
+  -webkit-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fav {
+  height: 60px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.favcontainerprofil {
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid black;
+  background: linear-gradient(
+    173deg,
+    #d43e3e,
+    #dda905,
+    #65d21c,
+    #1cd2a3,
+    #1c40d2,
+    #b91cd2,
+    #1cd1d2,
+    #e4f312
+  );
+  background-size: 1600% 1600%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+  margin: 1em 0;
+  padding: 0;
+  width: 70%;
+}
