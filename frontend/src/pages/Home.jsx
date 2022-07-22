@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable jsx-a11y/media-has-caption */
 import { useForm } from "react-hook-form";
-
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import animateScrollTo from "animated-scroll-to";
@@ -9,7 +9,6 @@ import Navbar from "../components/Navbar";
 import "../assets/css/home.css";
 import scroll from "../assets/scroll.gif";
 
-/* eslint-disable jsx-a11y/media-has-caption */
 export default function Home() {
   const [connected, setConnected] = useState();
   useEffect(() => {
