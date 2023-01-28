@@ -7,12 +7,14 @@ const mysqlConnectionFailedMessage =
   "Failed to connect with DB. If you need DB support, be sure to create .env from .env.sample file with valid DB parameters.";
 
 const load = (models) => {
+  const { DB_HOST, DB_USER, DB_PASSWORD, DB_NAME } = process.env;
+
   mysql
     .createConnection({
-      host: "localhost",
-      user: "root",
-      password: "9632147895Pi!",
-      database: "findlyrics",
+      host: DB_HOST,
+      user: DB_USER,
+      password: DB_PASSWORD,
+      database: DB_NAME,
     })
     .then((connection) => {
       mysqlConnectionFailed = false;

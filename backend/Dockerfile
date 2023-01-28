@@ -1,6 +1,6 @@
-FROM node:alpine
+FROM node:16.14
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
 ARG DB_HOST=${DB_HOST}
 ENV DB_HOST=${DB_HOST}
@@ -11,9 +11,8 @@ ENV DB_PASSWORD=${DB_PASSWORD}
 ARG DB_NAME=${DB_NAME}
 ENV DB_NAME=${DB_NAME}
 
+COPY ./backend .
 
-COPY package.json ./
-COPY package-lock.json ./
-COPY ./ ./
-RUN npm i
-CMD ["npm", "run", "start"]
+RUN npm install
+
+CMD [ "npm", "start" ]

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const Genius = require("genius-lyrics-scrape");
 const Lyricist = require("lyricist/node6");
 const lyricsFinder = require("@jeve/lyrics-finder");
@@ -40,8 +41,12 @@ class GeniusController {
           .LyricsFinder(searchRes.fullTitle)
           .then((data) => {
             res.send(data).status(201);
+            console.log("icicicici");
           })
-          .catch((err) => res.status(500).send(err));
+          .catch((err) => {
+            console.log("lalalalal");
+            res.status(500).send(err);
+          });
       })
       .catch((err) => res.status(500).send(err));
   };
